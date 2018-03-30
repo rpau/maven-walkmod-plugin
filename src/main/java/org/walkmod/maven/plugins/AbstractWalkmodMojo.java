@@ -50,8 +50,8 @@ public abstract class AbstractWalkmodMojo extends AbstractMojo {
     /**
      * If it is executed in verbose mode.
      */
-    @Parameter(property = "verbose", defaultValue = "true")
-    protected boolean verbose = true;
+    @Parameter(property = "verbose", defaultValue = "false")
+    protected boolean verbose = false;
 
     /**
      * If it prints errors
