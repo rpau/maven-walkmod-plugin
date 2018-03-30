@@ -36,6 +36,6 @@ public class ApplyMojo extends AbstractWalkmodMojo {
         } catch (InvalidConfigurationException e) {
             throw new MojoExecutionException("Error executing walkmod apply", e);
         }
-        
+        getLog().info("walkmod apply finished");
     }
 }

@@ -36,6 +36,6 @@ public class CheckMojo extends AbstractWalkmodMojo {
         } catch (InvalidConfigurationException e) {
             throw new MojoExecutionException("Error executing walkmod check", e);
         }
-        
+        getLog().info("walkmod check finished");
     }
 }

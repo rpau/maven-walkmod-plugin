@@ -68,5 +68,6 @@ public class PatchMojo extends AbstractWalkmodMojo {
         } catch (InvalidConfigurationException e) {
             throw new MojoExecutionException("Error executing walkmod patch", e);
         }
+        getLog().info("walkmod patch finished");
     }
 }
