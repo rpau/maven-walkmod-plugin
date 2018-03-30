@@ -34,6 +34,9 @@ public class ApplyMojo extends AbstractWalkmodMojo {
         try {
             facade.apply(chainList);
         } catch (InvalidConfigurationException e) {
+            getLog().error("Error executing walkmod apply. " +
+                    "Enable \"verbose\" and/or \"printError\" to get more information. " +
+                    "More information at: http://walkmod.github.io/maven-walkmod-plugin/apply-mojo.html", e);
             throw new MojoExecutionException("Error executing walkmod apply", e);
         }
         getLog().info("walkmod apply finished");

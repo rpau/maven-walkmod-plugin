@@ -34,6 +34,9 @@ public class CheckMojo extends AbstractWalkmodMojo {
         try {
             facade.check(chainList);
         } catch (InvalidConfigurationException e) {
+            getLog().error("Error executing walkmod check. " +
+                    "Enable \"verbose\" and/or \"printError\" to get more information. " +
+                    "More information at: http://walkmod.github.io/maven-walkmod-plugin/check-mojo.html", e);
             throw new MojoExecutionException("Error executing walkmod check", e);
         }
         getLog().info("walkmod check finished");

@@ -66,6 +66,9 @@ public class PatchMojo extends AbstractWalkmodMojo {
         try {
             facade.patch(chainList);
         } catch (InvalidConfigurationException e) {
+            getLog().error("Error executing walkmod patch. " +
+                    "Enable \"verbose\" and/or \"printError\" to get more information. " +
+                    "More information at: http://walkmod.github.io/maven-walkmod-plugin/patch-mojo.html", e);
             throw new MojoExecutionException("Error executing walkmod patch", e);
         }
         getLog().info("walkmod patch finished");
